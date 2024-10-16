@@ -1,8 +1,8 @@
 # checks .dz domains via the nic.dz API
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/piteurstudio/php-domain-dz.svg?style=flat-square)](https://packagist.org/packages/piteurstudio/php-domain-dz)
-[![Tests](https://img.shields.io/github/actions/workflow/status/piteurstudio/php-domain-dz/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/piteurstudio/php-domain-dz/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/piteurstudio/php-domain-dz.svg?style=flat-square)](https://packagist.org/packages/piteurstudio/php-domain-dz)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/piteurstudio/php-nicdz.svg?style=flat-square)](https://packagist.org/packages/piteurstudio/php-nicdz)
+[![Tests](https://img.shields.io/github/actions/workflow/status/PiteurStudio/php-domain-dz/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/PiteurStudio/php-domain-dz/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/piteurstudio/php-nicdz?style=flat-square)](https://packagist.org/packages/piteurstudio/php-nicdz)
 
 This php packages checks .dz domains via the [nic.dz Public API](https://api.nic.dz/swagger-ui/index.html). 
 
@@ -27,6 +27,11 @@ $dztld = new NicDz('example-domain.dz');
 
 $dztld->isAvailable(); // return bool
 ```
+
+Note : Accept only domain name valid .dz extensions
+
+`.gov.dz , .org.dz , .dz , .com.dz , .net.dz , .edu.dz , .asso.dz , .pol.dz , .art.dz , .net.dz , .org.dz , .soc.dz , tm.dz`
+
 
 ### Get whois information in different formats
 
