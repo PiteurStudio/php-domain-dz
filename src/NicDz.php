@@ -27,7 +27,7 @@ class NicDz
 
     public function __construct(string $domain)
     {
-        $this->domain = $domain;
+        $this->domain = $this->validate($domain);
 
         $this->client = HttpClient::create([
             'verify_peer' => false,
@@ -51,6 +51,15 @@ class NicDz
         } catch (TransportExceptionInterface $e) {
             throw new \RuntimeException('Error retrieving domain data: '.$e->getMessage());
         }
+    }
+
+    public function validate(string $domain): string
+    {
+        if(!preg_match('/^(www\.)?([a-z0-9-]+)((\.gov|\.com|\.org|\.net|\.edu|\.asso|\.art|\.pol|\.tm|\.soc)?\.dz)$/i', $domain)) {
+            throw new \InvalidArgumentException('Invalid domain name');
+        }
+
+        return str_replace(  ['www.'],'',strtolower($domain));
     }
 
     /**
