@@ -55,11 +55,11 @@ class NicDz
 
     public function validate(string $domain): string
     {
-        if(!preg_match('/^(www\.)?([a-z0-9-]+)((\.gov|\.com|\.org|\.net|\.edu|\.asso|\.art|\.pol|\.tm|\.soc)?\.dz)$/i', $domain)) {
+        if (! preg_match('/^(www\.)?([a-z0-9-]+)((\.gov|\.com|\.org|\.net|\.edu|\.asso|\.art|\.pol|\.tm|\.soc)?\.dz)$/i', $domain)) {
             throw new \InvalidArgumentException('Invalid domain name');
         }
 
-        return str_replace(  ['www.'],'',strtolower($domain));
+        return str_replace(['www.'], '', strtolower($domain));
     }
 
     /**
