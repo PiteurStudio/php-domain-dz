@@ -6,6 +6,10 @@
 
 This php packages checks .dz domains via the [nic.dz Public API](https://api.nic.dz/swagger-ui/index.html). 
 
+## Requirements
+
+- PHP 8.0 or higher
+
 ## Installation
 
 You can install the package via composer:
