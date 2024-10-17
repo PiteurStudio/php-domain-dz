@@ -1,4 +1,7 @@
-# checks .dz domains via the nic.dz API
+# Checks .dz domains via the `nic.dz` API
+
+![image](https://github.com/user-attachments/assets/eec9edd7-19d4-479d-8824-97b1d6ebb123)
+
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/piteurstudio/php-nicdz.svg?style=flat-square)](https://packagist.org/packages/piteurstudio/php-nicdz)
 [![Tests](https://img.shields.io/github/actions/workflow/status/PiteurStudio/php-domain-dz/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/PiteurStudio/php-domain-dz/actions/workflows/run-tests.yml)
