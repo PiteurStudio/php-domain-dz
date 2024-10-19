@@ -1,4 +1,4 @@
-# Checks .dz domains via the `nic.dz` API
+# PHP Client for Nic.dz 
 
 ![image](https://github.com/user-attachments/assets/eec9edd7-19d4-479d-8824-97b1d6ebb123)
 
@@ -7,7 +7,9 @@
 [![Tests](https://img.shields.io/github/actions/workflow/status/PiteurStudio/php-domain-dz/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/PiteurStudio/php-domain-dz/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/piteurstudio/php-nicdz?style=flat-square)](https://packagist.org/packages/piteurstudio/php-nicdz)
 
-This php packages checks .dz domains via the [nic.dz Public API](https://api.nic.dz/swagger-ui/index.html). 
+**PHP Client for Nic.dz** provides an easy-to-use interface for checking .dz domains through the official [nic.dz Public API](https://api.nic.dz/swagger-ui/index.html). 
+
+Effortlessly check domain availability or retrieve detailed WHOIS information for `.dz` domain extensions.
 
 ## Requirements
 
@@ -15,7 +17,7 @@ This php packages checks .dz domains via the [nic.dz Public API](https://api.nic
 
 ## Installation
 
-You can install the package via composer:
+Install the package via Composer:
 
 ```bash
 composer require piteurstudio/php-nicdz
@@ -23,39 +25,49 @@ composer require piteurstudio/php-nicdz
 
 ## Usage
 
-### Check if a domain is available
+### Domain Availability Check
+
+Easily verify if a `.dz` domain is available:
+
+
 
 ```php
 use PiteurStudio\NicDz;
 
 include 'vendor/autoload.php';
 
-$dztld = new NicDz('example-domain.dz');
+$domainChecker = new NicDz('example-domain.dz');
 
-$dztld->isAvailable(); // return bool
+$isAvailable = $domainChecker->isAvailable(); // Returns boolean: true if available, false otherwise
 ```
 
-Note : Accept only domain name valid .dz extensions
+Note: The package supports valid `.dz` extensions including: `.gov.dz`, `.org.dz`,  `.com.dz`, `.net.dz`, `.edu.dz`, `.asso.dz`, `.pol.dz`, `.art.dz`, `.soc.dz`, `.tm.dz` .
 
-`.gov.dz , .org.dz , .dz , .com.dz , .net.dz , .edu.dz , .asso.dz , .pol.dz , .art.dz , .net.dz , .org.dz , .soc.dz , tm.dz`
+### Retrieving WHOIS Information
 
-
-### Get whois information in different formats
+Get detailed WHOIS information in various formats:
 
 ```php
-$dztld = new NicDz('piteur-studio.dz');
+$domainChecker = new NicDz('piteur-studio.dz');
 
-$dztld->whois()->toArray();
+// As an array
+$whoisDataArray = $domainChecker->whois()->toArray();
 
-$dztld->whois()->toObject();
+// As an object
+$whoisDataObject = $domainChecker->whois()->toObject();
 
-$dztld->whois()->toString();
+// As a raw string
+$whoisDataString = $domainChecker->whois()->toString();
 
-$dztld->whois()->toJson();
+// As JSON
+$whoisDataJson = $domainChecker->whois()->toJson();
 
 ```
 
 ## Testing
+
+Run the tests with:
+
 
 ```bash
 composer test
@@ -73,6 +85,10 @@ Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTI
 
 Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
+## Disclaimer
+
+This package is not officially affiliated with or endorsed by **nic.dz**. The NIC.dz name, logo, and trademarks are the property of **nic.dz**.
+
 ## Credits
 
 - [Piteur Studio](https://github.com/PiteurStudio)
@@ -80,4 +96,4 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+This package is open-sourced software licensed under the [MIT License.](LICENSE.md).
