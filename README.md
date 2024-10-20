@@ -6,6 +6,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/piteurstudio/php-nicdz.svg?style=flat-square)](https://packagist.org/packages/piteurstudio/php-nicdz)
 [![Tests](https://img.shields.io/github/actions/workflow/status/PiteurStudio/php-domain-dz/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/PiteurStudio/php-domain-dz/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/piteurstudio/php-nicdz?style=flat-square)](https://packagist.org/packages/piteurstudio/php-nicdz)
+[![wakatime](https://wakatime.com/badge/github/PiteurStudio/php-domain-dz.svg)](https://wakatime.com/badge/github/PiteurStudio/php-domain-dz)
 
 **PHP Client for Nic.dz** provides an easy-to-use interface for checking .dz domains through the official [nic.dz Public API](https://api.nic.dz/swagger-ui/index.html). 
 
