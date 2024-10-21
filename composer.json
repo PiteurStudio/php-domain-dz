@@ -21,7 +21,7 @@
         "symfony/http-client": "^6.0"
     },
     "require-dev": {
-        "pestphp/pest": "^1.0",
+        "pestphp/pest": "^3.4",
         "laravel/pint": "^1.0",
         "spatie/ray": "^1.0"
     },
