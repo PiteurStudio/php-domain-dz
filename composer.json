@@ -18,10 +18,10 @@
     ],
     "require": {
         "php": "^8.0",
-        "symfony/http-client": "^6.0"
+        "symfony/http-client": "^6.0|^7.0"
     },
     "require-dev": {
-        "pestphp/pest": "^1.0",
+        "pestphp/pest": "^1.0|^2.0|^3.0",
         "laravel/pint": "^1.0",
         "spatie/ray": "^1.0"
     },
